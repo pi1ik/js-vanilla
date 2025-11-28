@@ -27,8 +27,8 @@ body {
 }
 
 .courses {
-  padding: 40px 20px;
-  max-width: 1200px;
+  padding: 44px 20px;
+  max-width: 1230px;
   margin: 0 auto;
 
   &__header {
@@ -36,24 +36,30 @@ body {
   }
 
   &__subtitle {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 150%;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-right: 52px;
   }
 
   &__title {
-    font-size: 32px;
+    margin: 0 52px 85px 0;
+    font-size: 46px;
     font-weight: 900;
-    margin-bottom: 85px;
+    line-height: 130%;
+    margin-bottom: 83px;
+    margin-right: 52px;
   }
 
   &__controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     flex-wrap: wrap;
     gap: 10px;
   }
@@ -102,29 +108,46 @@ body {
   }
 }
 
-.filter__btn {
-  padding: 10px 20px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  background: white;
-  color: #9a9ca5;
-  font-weight: 700;
-  transition: 0.3s;
+.filter {
+  height: 46px;
+  display: flex;
+  gap: 12px;
 
-  &:hover {
-    color: #ff3f3a;
-  }
+  &__btn {
+    font-family: Lato, sans-serif;
+    height: 100%;
+    padding: 10px 20px;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: white;
+    color: #9a9ca5;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.3s;
+    letter-spacing: 0;
+    display: flex;
+    gap: 4px;
+    line-height: 160%;
+    &:hover {
+      color: #ff3f3a;
+    }
 
-  &_active {
-    color: #ff3f3a;
-    border: 1px solid #ff3f3a;
-    border-radius: 4px;
+    &_active {
+      color: #ff3f3a;
+      border: 1px solid #ff3f3a;
+      border-radius: 4px;
+    }
+    &__label {
+      font-size: 10px;
+      line-height: 150%;
+    }
   }
 }
 
 .search {
   min-width: 315px;
-  padding: 14px 16px;
+  padding: 14px;
   height: 44px;
   box-sizing: border-box;
   display: flex;
@@ -133,6 +156,8 @@ body {
   border: 1px solid #d7dadd;
   border-radius: 4px;
   &__input {
+    font-size: 14px;
+    font-family: Lato, sans-serif;
     border: 1px solid transparent;
     width: 100%;
     color: #9a9ca5;
@@ -146,7 +171,8 @@ body {
 .card {
   z-index: 10;
   border: 1px solid #eee;
-  border-radius: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
   overflow: hidden;
   background: #fff;
   transition: 0.3s;
@@ -154,12 +180,14 @@ body {
     0 30px 24px -10px #9a9ca50d, 0 80px 80px -20px #9a9ca514;
 
   &:hover {
-    transform: scale(1.02);
+    box-shadow: 0 4px 4px -4px #1e212c0d, 0 12px 10px -6px #9a9ca514,
+      0 30px 24px -10px #9a9ca51a, 0 80px 80px -20px #9a9ca529;
   }
 
   &__img {
     width: 100%;
     display: block;
+    height: 240px;
   }
 
   &__content {
@@ -168,43 +196,50 @@ body {
 
   &__tag {
     display: inline-block;
-    margin-bottom: 8px;
-    font-size: 12px;
-    padding: 3px 7px;
+    font-size: 14px;
+    padding: 3px 8px;
     border-radius: 4px;
     color: #fff;
     text-transform: capitalize;
-
+    font-weight: 400;
+    font-family: Lato, sans-serif;
     &_marketing {
-      background: #59c173;
+      background: #03cea4;
     }
     &_management {
-      background: #5b8def;
+      background: #5a87fc;
     }
     &_hr {
-      background: #f6b93b;
+      background: #f89828;
     }
     &_design {
-      background: #e74c3c;
+      background: #f52f6e;
     }
     &_dev {
-      background: #6c5ce7;
+      background: #7772f1;
     }
   }
 
   &__title {
     margin: 20px 0;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 150%;
   }
 
   &__price {
     font-size: 18px;
     font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
     color: #ff4242;
+    margin-bottom: 0;
   }
 
   &__author {
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0;
     font-weight: 400;
     color: #787a80;
   }

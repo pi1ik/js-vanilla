@@ -27,30 +27,36 @@ body {
 }
 
 .courses {
-  padding: 40px 20px;
-  max-width: 1200px;
+  padding: 44px 20px;
+  max-width: 1230px;
   margin: 0 auto;
 }
 .courses__header {
   text-align: center;
 }
 .courses__subtitle {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 150%;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  margin-right: 52px;
 }
 .courses__title {
-  font-size: 32px;
+  margin: 0 52px 85px 0;
+  font-size: 46px;
   font-weight: 900;
-  margin-bottom: 85px;
+  line-height: 130%;
+  margin-bottom: 83px;
+  margin-right: 52px;
 }
 .courses__controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -98,14 +104,27 @@ body {
   transition: 0.3s;
 }
 
+.filter {
+  height: 46px;
+  display: flex;
+  gap: 12px;
+}
 .filter__btn {
+  font-family: Lato, sans-serif;
+  height: 100%;
   padding: 10px 20px;
-  border: 1px solid transparent;
+  border: none;
+  box-sizing: border-box;
   cursor: pointer;
   background: white;
   color: #9a9ca5;
   font-weight: 700;
+  font-size: 16px;
   transition: 0.3s;
+  letter-spacing: 0;
+  display: flex;
+  gap: 4px;
+  line-height: 160%;
 }
 .filter__btn:hover {
   color: #ff3f3a;
@@ -115,10 +134,14 @@ body {
   border: 1px solid #ff3f3a;
   border-radius: 4px;
 }
+.filter__btn__label {
+  font-size: 10px;
+  line-height: 150%;
+}
 
 .search {
   min-width: 315px;
-  padding: 14px 16px;
+  padding: 14px;
   height: 44px;
   box-sizing: border-box;
   display: flex;
@@ -128,6 +151,8 @@ body {
   border-radius: 4px;
 }
 .search__input {
+  font-size: 14px;
+  font-family: Lato, sans-serif;
   border: 1px solid transparent;
   width: 100%;
   color: #9a9ca5;
@@ -142,57 +167,67 @@ body {
 .card {
   z-index: 10;
   border: 1px solid #eee;
-  border-radius: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
   overflow: hidden;
   background: #fff;
   transition: 0.3s;
   box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.031372549), 0 12px 10px -6px rgba(154, 156, 165, 0.0392156863), 0 30px 24px -10px rgba(154, 156, 165, 0.0509803922), 0 80px 80px -20px rgba(154, 156, 165, 0.0784313725);
 }
 .card:hover {
-  transform: scale(1.02);
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.0509803922), 0 12px 10px -6px rgba(154, 156, 165, 0.0784313725), 0 30px 24px -10px rgba(154, 156, 165, 0.1019607843), 0 80px 80px -20px rgba(154, 156, 165, 0.1607843137);
 }
 .card__img {
   width: 100%;
   display: block;
+  height: 240px;
 }
 .card__content {
   padding: 24px;
 }
 .card__tag {
   display: inline-block;
-  margin-bottom: 8px;
-  font-size: 12px;
-  padding: 3px 7px;
+  font-size: 14px;
+  padding: 3px 8px;
   border-radius: 4px;
   color: #fff;
   text-transform: capitalize;
+  font-weight: 400;
+  font-family: Lato, sans-serif;
 }
 .card__tag_marketing {
-  background: #59c173;
+  background: #03cea4;
 }
 .card__tag_management {
-  background: #5b8def;
+  background: #5a87fc;
 }
 .card__tag_hr {
-  background: #f6b93b;
+  background: #f89828;
 }
 .card__tag_design {
-  background: #e74c3c;
+  background: #f52f6e;
 }
 .card__tag_dev {
-  background: #6c5ce7;
+  background: #7772f1;
 }
 .card__title {
   margin: 20px 0;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 150%;
 }
 .card__price {
   font-size: 18px;
   font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0;
   color: #ff4242;
+  margin-bottom: 0;
 }
 .card__author {
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0;
   font-weight: 400;
   color: #787a80;
 }
