@@ -17,7 +17,7 @@ body {
     top: 60vh;
   }
   &__dots {
-    right: -45px;
+    right: 0px;
     top: 50px;
   }
   &__arrows {
@@ -124,18 +124,27 @@ body {
 
 .search {
   min-width: 315px;
+  padding: 14px 16px;
+  height: 44px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d7dadd;
+  border-radius: 4px;
   &__input {
-    padding: 10px 15px;
-    height: 44px;
-    box-sizing: border-box;
-    border: 1px solid #d7dadd;
+    border: 1px solid transparent;
     width: 100%;
-    border-radius: 4px;
     color: #9a9ca5;
+    outline: none;
+  }
+  @media screen and (max-width: 992px) {
+    min-width: 100%;
   }
 }
 
 .card {
+  z-index: 10;
   border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
@@ -166,19 +175,19 @@ body {
     color: #fff;
     text-transform: capitalize;
 
-    &--marketing {
+    &_marketing {
       background: #59c173;
     }
-    &--management {
+    &_management {
       background: #5b8def;
     }
-    &--hr {
+    &_hr {
       background: #f6b93b;
     }
-    &--design {
+    &_design {
       background: #e74c3c;
     }
-    &--dev {
+    &_dev {
       background: #6c5ce7;
     }
   }

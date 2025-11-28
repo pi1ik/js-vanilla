@@ -143,7 +143,7 @@ function renderCourses() {
       <article class="card" data-category="${course.category}">
         <img class="card__img" src="${course.img}" alt="${course.title}" />
         <div class="card__content">
-          <span class="card__tag card__tag--${course.category}">${course.category}</span>
+          <span class="card__tag card__tag_${course.category}">${course.category}</span>
           <h3 class="card__title">${course.title}</h3>
           <p class="card__price">$${course.price} <span class="card__author">| by ${course.author}</span></p>
         </div>

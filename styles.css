@@ -18,7 +18,7 @@ body {
   top: 60vh;
 }
 .bg__dots {
-  right: -45px;
+  right: 0px;
   top: 50px;
 }
 .bg__arrows {
@@ -118,18 +118,29 @@ body {
 
 .search {
   min-width: 315px;
-}
-.search__input {
-  padding: 10px 15px;
+  padding: 14px 16px;
   height: 44px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #d7dadd;
-  width: 100%;
   border-radius: 4px;
+}
+.search__input {
+  border: 1px solid transparent;
+  width: 100%;
   color: #9a9ca5;
+  outline: none;
+}
+@media screen and (max-width: 992px) {
+  .search {
+    min-width: 100%;
+  }
 }
 
 .card {
+  z-index: 10;
   border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
@@ -156,19 +167,19 @@ body {
   color: #fff;
   text-transform: capitalize;
 }
-.card__tag--marketing {
+.card__tag_marketing {
   background: #59c173;
 }
-.card__tag--management {
+.card__tag_management {
   background: #5b8def;
 }
-.card__tag--hr {
+.card__tag_hr {
   background: #f6b93b;
 }
-.card__tag--design {
+.card__tag_design {
   background: #e74c3c;
 }
-.card__tag--dev {
+.card__tag_dev {
   background: #6c5ce7;
 }
 .card__title {
